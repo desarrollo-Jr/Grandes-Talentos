@@ -88,9 +88,7 @@ export function ValuesSection() {
       </div>
 
       <div className="values-label">
-        VALORES DE LA
-        <br />
-        FUNDACIÓN
+        VALORES DE LA FUNDACIÓN
       </div>
     </section>
   );
