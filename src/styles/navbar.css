@@ -1,0 +1,146 @@
+.header {
+  width: 100%;
+  background-color: #00152f;
+}
+
+.header-container {
+  max-width: 1300px;
+  min-height: 108px;
+  margin: 0 auto;
+  padding: 0 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+.logo-symbol {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-symbol span {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+}
+
+.logo-symbol span:nth-child(2) {
+  margin-left: 15px;
+  background-color: #6fa0da;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.logo-text small {
+  font-size: 9px;
+  color: #9db4d0;
+}
+
+.logo-text strong {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* BUSCADOR */
+
+.search-box {
+  width: 190px;
+  height: 35px;
+  background: white;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.search-box span {
+  color: #00152f;
+  margin-right: 8px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 11px;
+}
+.navbar {
+  flex: 1;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+
+  list-style: none;
+}
+
+.navbar a {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .navbar-container {
+    width: 100%;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE CORREGIDO
+========================================= */
+@media (max-width: 1050px) {
+  .header-container { padding-left: 24px; padding-right: 24px; gap: 18px; }
+  .navbar ul { gap: 24px; }
+  .navbar a { font-size: 11px; }
+  .search-box { width: 155px; }
+}
+
+@media (max-width: 768px) {
+  .header-container { padding-left: 16px; padding-right: 16px; }
+  .navbar { padding: 0; width: auto; }
+  .navbar ul { display: none; }
+  .search-box { display: none; }
+}

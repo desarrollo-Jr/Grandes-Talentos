@@ -1,0 +1,263 @@
+/* =========================================
+   PÁGINA FORMULARIO CEM PAQUI
+========================================= */
+
+.interes-cem-page {
+  width: 100%;
+  min-height: 650px;
+
+  padding: 70px 40px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.interes-cem-container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 100px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.interes-cem-logo {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interes-cem-logo img {
+  width: 100%;
+  max-width: 350px;
+
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.interes-cem-formulario {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* TÍTULO */
+
+.interes-cem-formulario h1 {
+  margin: 0 0 18px;
+
+  color: #578bdd;
+
+  font-size: 30px;
+  font-weight: 900;
+}
+
+
+/* SUBTÍTULO */
+
+.interes-cem-subtitulo {
+  margin: 0 0 25px;
+
+  color: #071a36;
+
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.interes-cem-formulario form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* INPUTS */
+
+.interes-cem-formulario input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 25px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background-color: #edf3fb;
+
+  color: #071a36;
+
+  font-size: 17px;
+
+  box-sizing: border-box;
+}
+
+
+/* TEXTAREA */
+
+.interes-cem-formulario textarea {
+  width: 100%;
+  min-height: 110px;
+
+  padding: 18px 25px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 22px;
+
+  background-color: #edf3fb;
+
+  color: #071a36;
+
+  font-family: inherit;
+  font-size: 17px;
+
+  resize: none;
+
+  box-sizing: border-box;
+}
+
+
+/* PLACEHOLDERS */
+
+.interes-cem-formulario input::placeholder,
+.interes-cem-formulario textarea::placeholder {
+  color: #578bdd;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   BOTÓN ENVIAR
+========================================= */
+
+.interes-cem-formulario button {
+  width: 170px;
+  height: 47px;
+
+  margin: 0 auto;
+  margin-top: 2px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background-color: #578bdd;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.interes-cem-formulario button:hover {
+  background-color: #001733;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .interes-cem-container {
+    gap: 50px;
+  }
+
+  .interes-cem-logo img {
+    max-width: 280px;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+  .interes-cem-page {
+    padding: 40px 20px;
+  }
+
+  .interes-cem-container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .interes-cem-logo img {
+    max-width: 220px;
+  }
+
+  .interes-cem-formulario {
+    max-width: 100%;
+  }
+
+  .interes-cem-formulario h1 {
+    font-size: 26px;
+  }
+
+  .interes-cem-subtitulo {
+    font-size: 16px;
+  }
+
+}
+
+/* RESPONSIVE FINAL */
+@media (max-width: 768px) {
+  .interes-cem-page { padding: 35px 18px; overflow-x: hidden; }
+  .interes-cem-container { grid-template-columns: 1fr; gap: 32px; }
+  .interes-cem-logo img { max-width: 210px; }
+  .interes-cem-formulario { max-width: 520px; }
+  .interes-cem-formulario h1 { font-size: 25px; }
+  .interes-cem-subtitulo { font-size: 16px; }
+  .interes-cem-formulario input, .interes-cem-formulario textarea { font-size: 16px; }
+}

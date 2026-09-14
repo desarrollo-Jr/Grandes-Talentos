@@ -1,0 +1,393 @@
+/* =========================================
+   PÁGINA APOYA
+========================================= */
+
+.apoya-page {
+  width: 100%;
+  min-height: 650px;
+
+  position: relative;
+
+  background-color: #ffffff;
+}
+
+
+/* =========================================
+   IMAGEN SUPERIOR
+========================================= */
+
+.apoya-hero {
+  width: 100%;
+  height: 390px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   CONTENEDOR FORMULARIO
+========================================= */
+
+.donation-form-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  margin-top: -225px;
+}
+
+
+/* =========================================
+   FORMULARIO AZUL
+========================================= */
+
+.donation-form {
+  width: 100%;
+  max-width: 1070px;
+
+  padding: 42px 32px 35px;
+
+  background-color: #00152f;
+
+  border-radius: 32px;
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+.donation-form h1 {
+  margin: 0 0 28px;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   PRIMERA FILA
+========================================= */
+
+.donation-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.donation-form input,
+.donation-form select {
+  width: 100%;
+  height: 50px;
+
+  padding: 0 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  outline: none;
+
+  background-color: #ffffff;
+
+  color: #00152f;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+.donation-form input::placeholder {
+  color: #00152f;
+}
+
+
+/* =========================================
+   SEGUNDA FILA
+========================================= */
+
+.donation-second-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1fr
+    0.45fr
+    0.45fr;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   FRECUENCIA
+========================================= */
+
+.donation-frequency {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.donation-frequency label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.donation-frequency input {
+  width: 18px;
+  height: 18px;
+
+  accent-color: #5c8fe0;
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.donation-bottom {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.donation-checks {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.donation-checks label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+.donation-checks input {
+  width: 18px;
+  height: 18px;
+}
+
+.donation-checks span {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   MÉTODOS DE PAGO
+========================================= */
+
+.payment-methods {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.payment-methods div {
+  min-width: 60px;
+  height: 35px;
+
+  padding: 0 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  color: #00152f;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   BOTÓN DONACIÓN
+========================================= */
+
+.donation-submit {
+  width: 185px;
+  height: 50px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #5c8fe0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.donation-submit:hover {
+  background-color: #ffffff;
+
+  color: #00152f;
+}
+
+
+/* =========================================
+   ESPACIO INFERIOR
+========================================= */
+
+.donation-form-section {
+  padding-bottom: 120px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .donation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donation-second-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donation-bottom {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .donation-submit {
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+  .apoya-hero {
+    height: 280px;
+  }
+
+  .donation-form-section {
+    margin-top: -100px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .donation-form {
+    padding: 30px 20px;
+
+    border-radius: 22px;
+  }
+
+  .donation-form h1 {
+    font-size: 16px;
+
+    line-height: 1.4;
+  }
+
+  .donation-grid,
+  .donation-second-row {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-checks label {
+    font-size: 13px;
+  }
+
+  .payment-methods {
+    flex-wrap: wrap;
+  }
+
+}
+
+/* RESPONSIVE FINAL */
+@media (max-width: 768px) {
+  .apoya-page { min-width: 0; overflow-x: hidden; }
+  .apoya-hero { height: 260px; }
+  .donation-form-section { margin-top: -85px; padding: 0 14px 70px; }
+  .donation-form { padding: 28px 18px; border-radius: 20px; }
+  .donation-grid, .donation-second-row, .donation-bottom { grid-template-columns: 1fr; gap: 14px; }
+  .donation-submit { width: 100%; max-width: 240px; }
+}

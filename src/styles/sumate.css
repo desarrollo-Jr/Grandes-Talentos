@@ -1,0 +1,327 @@
+/* =========================================
+   PÁGINA SÚMATE
+========================================= */
+
+.sumate-page {
+  width: 100%;
+  min-height: 650px;
+
+  padding: 55px 30px 80px;
+
+  background-color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* ENCABEZADO */
+
+.sumate-page-header {
+  max-width: 800px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.sumate-page-header h1 {
+  margin: 0 0 25px;
+
+  color: #5c8fe0;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.sumate-page-header p {
+  margin: 0 auto;
+
+  max-width: 650px;
+
+  color: #00152f;
+
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   3 COLUMNAS
+========================================= */
+
+.sumate-cards {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   CADA OPCIÓN
+========================================= */
+
+.sumate-option {
+  min-height: 430px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.sumate-image-button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.sumate-image-button img {
+  width: 280px;
+  height: 280px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.sumate-image-button:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+.sumate-option > h2 {
+  margin: 20px 0 25px;
+
+  color: #5c8fe0;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   BOTÓN SUMARME
+========================================= */
+
+.sumate-button {
+  width: 140px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: #00152f;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.sumate-button:hover {
+  background-color: #5c8fe0;
+}
+
+
+/* =========================================
+   FORMULARIO QUE REEMPLAZA LA IMAGEN
+========================================= */
+
+.sumate-form-box {
+  width: 100%;
+  max-width: 320px;
+
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+
+/* TITULO DEL FORMULARIO */
+
+.sumate-form-box h2 {
+  margin: 0 0 20px;
+
+  color: #5c8fe0;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.sumate-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+/* CAMPOS */
+
+.sumate-form input,
+.sumate-form textarea {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+
+  border-bottom: 1px solid #bdc4cf;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #00152f;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  box-sizing: border-box;
+}
+
+.sumate-form input::placeholder,
+.sumate-form textarea::placeholder {
+  color: #929aaa;
+}
+
+.sumate-form input:focus,
+.sumate-form textarea:focus {
+  border-bottom-color: #5c8fe0;
+}
+
+.sumate-form textarea {
+  resize: none;
+}
+
+
+/* =========================================
+   BOTÓN ENVIAR
+========================================= */
+
+.sumate-form .form-submit {
+  width: 125px;
+  height: 34px;
+
+  margin: 18px auto 0;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: #00152f;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.sumate-form .form-submit:hover {
+  background-color: #5c8fe0;
+}
+
+
+/* =========================================
+   BOTÓN REGRESAR
+========================================= */
+
+.form-back {
+  margin: 12px auto 0;
+
+  border: none;
+
+  background-color: transparent;
+
+  color: #5c8fe0;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.form-back:hover {
+  color: #00152f;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .sumate-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sumate-form {
+    width: 100%;
+  }
+
+  .sumate-form input,
+  .sumate-form textarea,
+  .sumate-form select {
+    width: 100%;
+  }
+
+}
+
+/* RESPONSIVE FINAL */
+@media (max-width: 980px) {
+  .sumate-cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 50px 35px; }
+}
+@media (max-width: 700px) {
+  .sumate-page { padding: 38px 18px 60px; overflow-x: hidden; }
+  .sumate-page-header { margin-bottom: 38px; }
+  .sumate-cards { grid-template-columns: 1fr; gap: 50px; }
+  .sumate-option { min-height: auto; }
+  .sumate-image-button img { width: min(280px, 82vw); height: auto; aspect-ratio: 1 / 1; }
+  .sumate-form-box { max-width: 420px; min-height: 0; }
+}

@@ -1,0 +1,384 @@
+/* =========================================
+   FOOTER GENERAL
+========================================= */
+
+.footer {
+  width: 100%;
+  background-color: #00152f;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   PARTE SUPERIOR
+========================================= */
+
+.footer-main {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 45px 35px 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1.5fr;
+
+  gap: 45px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   COLUMNAS
+========================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* TITULOS */
+
+.footer-column h3 {
+  margin: 0 0 22px;
+
+  color: #5c8fe0;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* LINKS */
+
+.footer-column a {
+  margin-bottom: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.2s;
+}
+
+.footer-column a:hover {
+  color: #5c8fe0;
+}
+
+
+/* ICONOS REDES */
+
+.footer-column a svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGO GRANDES TALENTOS
+========================================= */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.footer-logo-link {
+  display: inline-block;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.footer-logo {
+  width: 160px;
+
+  height: auto;
+
+  margin-bottom: 20px;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-link:hover .footer-logo {
+  transform: scale(1.05);
+}
+
+.footer-brand p {
+  margin: 0;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.footer-brand strong {
+  margin-top: 3px;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   GRUPO INDIGO
+========================================= */
+
+.footer-indigo {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 5px auto 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.footer-indigo img {
+  width: 160px;
+
+  height: auto;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   REDES PARTE INFERIOR
+========================================= */
+
+.footer-social-bottom {
+  width: 100%;
+
+  max-width: 550px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 65px;
+}
+
+.footer-social-bottom > a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.footer-social-icons {
+  display: flex;
+
+  gap: 12px;
+
+  color: #5c8fe0;
+}
+
+.footer-social-icons svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* =========================================
+   BARRA INFERIOR
+========================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 50px;
+
+  padding: 0 35px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    3fr
+    1.5fr;
+
+  align-items: center;
+
+  background-color: #5c8fe0;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* UBICACION */
+
+.footer-location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 8px;
+}
+
+.footer-location svg {
+  width: 13px;
+  height: 13px;
+}
+
+
+/* COPYRIGHT */
+
+.footer-bottom p {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 7px;
+}
+
+
+/* LINKS INFERIORES */
+
+.footer-links {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .footer-main {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 40px 25px;
+  }
+
+  .footer-column {
+    align-items: center;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-social-bottom {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    text-align: center;
+  }
+
+  .footer-location {
+    justify-content: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+}
+
+/* RESPONSIVE FINAL */
+@media (max-width: 768px) {
+  .footer { overflow-x: hidden; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0,1fr)); padding: 35px 22px; gap: 32px 24px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-social-bottom { gap: 24px; flex-wrap: wrap; padding: 0 20px; }
+  .footer-bottom { grid-template-columns: 1fr; gap: 10px; padding: 16px 20px; }
+  .footer-links, .footer-location { justify-content: center; }
+}
+@media (max-width: 520px) {
+  .footer-main { grid-template-columns: 1fr; text-align: center; }
+  .footer-column { align-items: center; }
+  .footer-brand { grid-column: auto; }
+  .footer-social-bottom { flex-direction: column; gap: 14px; }
+  .footer-links { flex-wrap: wrap; gap: 12px 20px; }
+}

@@ -1,0 +1,1905 @@
+
+
+/* =========================
+   HOME
+========================= */
+.hero {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  min-height: 600px;
+
+  margin: 0 auto;
+
+  display: flex;
+}
+
+/* =========================
+   COLUMNA IZQUIERDA
+========================= */
+
+.hero-left {
+  position: relative;
+  width: 37.5%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #00152f;
+  overflow: hidden;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 80%;
+  max-width: 390px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content h2 {
+  margin-bottom: 15px;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* BOTÓN */
+
+.hero-button {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffffff;
+  color: #00152f;
+}
+
+/* =========================
+   FIGURAS IZQUIERDA
+========================= */
+
+.decoration {
+  position: absolute;
+  z-index: 1;
+
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.decoration-one {
+  width: 95px;
+  height: 95px;
+
+  bottom: 95px;
+  right: 125px;
+}
+
+.decoration-two {
+  width: 95px;
+  height: 95px;
+
+  bottom: 115px;
+  right: 25px;
+}
+
+.decoration-three {
+  width: 42px;
+  height: 42px;
+
+  bottom: 20px;
+  right: 150px;
+}
+
+/* =========================
+   COLUMNA DERECHA
+========================= */
+
+.hero-right {
+  position: relative;
+  width: 62.5%;
+  min-height: 600px;
+
+  overflow: hidden;
+
+  background-image: url("../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Capa azul parecida a la maqueta */
+
+.hero-right::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(50, 105, 180, 0.22);
+}
+
+/* =========================
+   FIGURAS DERECHA
+========================= */
+
+.hero-shape {
+  position: absolute;
+  z-index: 2;
+
+  border-radius: 50%;
+
+  background-color: rgba(241, 235, 216, 0.45);
+}
+
+.shape-one {
+  width: 180px;
+  height: 180px;
+
+  top: 25px;
+  right: 30px;
+}
+
+.shape-two {
+  width: 185px;
+  height: 185px;
+
+  bottom: 35px;
+  right: 40px;
+}
+
+.shape-three {
+  width: 145px;
+  height: 145px;
+
+  bottom: 5px;
+  left: 48%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left {
+    min-height: 400px;
+  }
+
+  .hero-right {
+    min-height: 450px;
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+}
+
+.hero-left {
+  width: 40%;
+  background-color: #00152f;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  padding: 40px;
+  text-align: center;
+}
+
+.hero-right {
+  width: 60%;
+  background-color: #5c8fe0;
+
+  background-image: url("/hero.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+
+  border: 1px solid white;
+  border-radius: 25px;
+
+  color: white;
+  text-decoration: none;
+}
+/* =========================
+   BANNER
+========================= */
+.banner-section {
+  top: 4206px;
+  left: 0px;
+  width: 920px;
+  height: 836px;
+/* UI Properties */
+opacity: 1;
+}
+
+.banner-video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .banner-section {
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-section {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-section {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+
+  margin: 70px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 55px;
+
+  background-color: #ffffff;
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.about-image {
+  width: 55%;
+  height: 460px;
+
+  background-image: url("/about.jpg");
+  background-size: cover;
+  background-position: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   CUADRO AZUL
+========================= */
+
+.about-content {
+  width: 55%;
+  min-height: 380px;
+
+  margin-left: -70px;
+
+  padding: 50px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #5c8fe0;
+  color: #ffffff;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.about-content h2 {
+  margin: 0 0 25px;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.about-content p {
+  margin: 0 0 22px;
+
+  font-size: 18px;
+  line-height: 1.25;
+
+  color: #ffffff;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+  .about-section {
+    flex-direction: column;
+
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 350px;
+  }
+
+  .about-content {
+    width: 90%;
+    min-height: auto;
+
+    margin-left: -40px;
+    margin-top: -40px;
+
+    padding: 35px 25px;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}
+/* =========================
+   VALUES
+========================= */
+
+
+.values-section {
+  width: calc(100% - 80px);
+  max-width: 1295px;
+  margin: 50px auto;
+  padding: 55px 70px 80px;
+
+  position: relative;
+
+  background-color: #00152f;
+  color: #ffffff;
+}
+
+/* ENCABEZADO */
+
+.values-header {
+  text-align: center;
+}
+
+.values-header h2 {
+  margin-bottom: 30px;
+
+  color: #5c8fe0;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.values-header p {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* TARJETAS */
+
+.values-grid {
+  
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  align-items: end;
+}
+
+.value-card {
+  min-height: 190px;
+
+  position: relative;
+
+  padding: 55px 18px 25px;
+
+  background-color: #5c8fe0;
+
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+/* CÍRCULO SUPERIOR */
+
+.value-icon {
+  width: 90px;
+  height: 90px;
+
+  position: absolute;
+
+  top: -43px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #5c8fe0;
+
+  border-radius: 50%;
+}
+
+.value-icon span {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.value-card h3 {
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.value-card p {
+  color: #ffffff;
+
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+/* TEXTO AMARILLO */
+
+.values-label {
+  margin-top: 20px;
+  margin-right: 10px;
+
+  text-align: right;
+
+  color: #fff200;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .values-section {
+    padding: 35px 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .values-label {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.values-section {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  margin: 0 auto;
+  padding: 35px 70px 20px;
+
+  position: relative;
+
+  background-color: #00152f;
+  color: #ffffff;
+}
+
+/* ENCABEZADO */
+
+.values-header {
+  text-align: center;
+}
+
+.values-header h2 {
+  margin-bottom: 30px;
+
+  color: #5c8fe0;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.values-header p {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* TARJETAS */
+
+.values-grid {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 45px;
+
+  align-items: end;
+}
+
+.value-card {
+  min-height: 190px;
+
+  position: relative;
+
+  padding: 55px 18px 25px;
+
+  background-color: #5c8fe0;
+
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+/* CÍRCULO SUPERIOR */
+
+.value-icon {
+  width: 90px;
+  height: 90px;
+
+  position: absolute;
+
+  top: -43px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #5c8fe0;
+
+  border-radius: 50%;
+}
+
+.value-icon span {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.value-card h3 {
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.value-card p {
+  color: #ffffff;
+
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+/* TEXTO AMARILLO */
+
+.values-label {
+  margin-top: 20px;
+  margin-right: 10px;
+
+  text-align: right;
+
+  color: #fff200;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .values-section {
+    padding: 35px 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .values-label {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* =========================
+   PROGRAMS
+========================= */
+
+/* =====================================
+   SECCIÓN PROGRAMAS
+===================================== */
+
+.programs-section {
+  width: 100%;
+  background-color: #3f7ff5;
+
+  padding: 65px 30px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================
+   TITULO PROGRAMAS
+===================================== */
+
+.programs-title {
+  margin: 0 0 35px;
+
+  text-align: center;
+
+  color: #ffe600;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  letter-spacing: 5px;
+}
+
+
+/* =====================================
+   CONTENEDOR DE LOS 3 PROGRAMAS
+===================================== */
+
+.programs-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 65px;
+}
+
+
+/* =====================================
+   CADA PROGRAMA
+===================================== */
+
+.program-item {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   IMAGEN
+===================================== */
+
+.program-image {
+  width: 225px;
+  height: 225px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 2px;
+}
+
+
+/* =====================================
+   BOTÓN / PASTILLA
+===================================== */
+
+.program-pill {
+  width: 250px;
+  min-height: 33px;
+
+  margin-top: 15px;
+
+  padding: 8px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background-color: #001c49;
+
+  border-radius: 30px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   TEXTO
+===================================== */
+
+.program-item p {
+  max-width: 290px;
+
+  margin: 25px auto 0;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1.55;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 950px) {
+
+  .programs-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+  }
+
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 650px) {
+
+  .programs-section {
+    padding: 50px 20px;
+  }
+
+  .programs-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .program-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .program-pill {
+    width: 260px;
+  }
+
+  .program-item p {
+    max-width: 320px;
+  }
+
+}
+/* =========================
+   DONATIONS
+========================= */
+.donation-section {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  margin: 0 auto;
+  padding: 35px 70px 45px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 45px;
+  background-color: #ffffff;
+}
+
+.donation-card { text-align: center; min-width: 0; }
+
+.donation-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.donation-card h2 {
+  margin: 35px 0 22px;
+  color: #5c8fe0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.donation-card p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  color: #00152f;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.donation-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #00152f;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.donation-button span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00152f;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.donation-button:hover { opacity: 0.7; }
+
+@media (max-width: 850px) {
+  .donation-section {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+  .donation-card img { height: 220px; }
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonial-section {
+  width: 100%;
+  min-height: 150px;
+
+  padding: 25px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  background-color: #00152f;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   CONTENEDOR PERSONA
+========================= */
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   CÍRCULO AZUL
+========================= */
+
+.testimonial-circle {
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background-color: #5c8fe0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   IMAGEN DE PERSONA
+========================= */
+
+.testimonial-circle img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: bottom center;
+
+  display: block;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.testimonial-content {
+  width: 100%;
+  max-width: 470px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+}
+
+
+/* =========================
+   TEXTO TESTIMONIAL
+========================= */
+
+.testimonial-content p {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  line-height: 1.3;
+
+  font-style: italic;
+}
+
+
+/* =========================
+   NOMBRE
+========================= */
+
+.testimonial-content h3 {
+  margin: 0 0 2px;
+
+  color: #5c8fe0;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.testimonial-content span {
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+  .testimonial-section {
+    flex-direction: column;
+
+    padding: 35px 20px;
+
+    gap: 20px;
+  }
+
+  .testimonial-content {
+    text-align: center;
+  }
+
+  .testimonial-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+/* =========================
+   LOCATION
+========================= */
+.location-section {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  background-color: #ffffff;
+}
+
+.location-map {
+  min-height: 420px;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  border: none;
+  display: block;
+}
+
+.location-info {
+  padding: 55px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  background-color: #5c8fe0;
+  color: #ffffff;
+}
+
+.location-block h2 {
+  margin-bottom: 20px;
+
+  color: #00152f;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.location-block p {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.location-block strong {
+  color: #00152f;
+}
+
+@media (max-width: 850px) {
+  .location-section {
+    grid-template-columns: 1fr;
+  }
+
+  .location-info {
+    padding: 40px 25px;
+  }
+}
+/* =========================
+   CONTACT
+========================= */
+/* =========================================
+   SECCIÓN CONTACTO
+========================================= */
+
+.contact-section {
+  width: 100%;
+  min-height: 470px;
+
+  padding: 30px 20px 45px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: #00152f;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   FIGURA DECORATIVA SUPERIOR
+========================================= */
+
+.contact-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 850px;
+  height: 300px;
+
+  top: -170px;
+  right: -100px;
+
+  background-color: #15396c;
+
+  border-radius: 50%;
+
+  transform: rotate(-12deg);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   FIGURA DECORATIVA INFERIOR
+========================================= */
+
+.contact-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 330px;
+
+  left: 20px;
+  bottom: -245px;
+
+  background-color: #17467f;
+
+  border-radius: 50%;
+
+  transform: rotate(25deg);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.contact-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.contact-title {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   INFORMACIÓN DE CONTACTO
+========================================= */
+
+.contact-info {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   CADA BLOQUE DE INFORMACIÓN
+========================================= */
+
+.contact-info-item {
+  min-height: 80px;
+
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-sizing: border-box;
+}
+
+.contact-info-item:last-child {
+  border-right: none;
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+
+  margin-bottom: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* =========================================
+   TEXTO PEQUEÑO
+========================================= */
+
+.contact-label {
+  margin-bottom: 4px;
+
+  color: #aeb8c8;
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   DATOS DE CONTACTO
+========================================= */
+
+.contact-info-item p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.contact-form {
+  width: 100%;
+  max-width: 420px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   INPUTS Y TEXTAREA
+========================================= */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  outline: none;
+
+  background-color: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.contact-form textarea {
+  min-height: 70px;
+
+  resize: none;
+}
+
+
+/* =========================================
+   BOTÓN ENVIAR
+========================================= */
+
+.contact-form button {
+  width: 100px;
+  height: 34px;
+
+  margin: 5px auto 0;
+
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+
+  background-color: transparent;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* =========================================
+   HOVER BOTÓN
+========================================= */
+
+.contact-form button:hover {
+  background-color: #ffffff;
+
+  color: #00152f;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .contact-section {
+    padding: 40px 25px 50px;
+  }
+
+  .contact-container {
+    max-width: 500px;
+  }
+
+  .contact-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .contact-info-item {
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding: 15px 0;
+  }
+
+  .contact-info-item:last-child {
+    border-bottom: none;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    flex-direction: column;
+    gap:25px
+  }
+
+  .contact-title {
+    font-size: 21px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 11px;
+  }
+
+  .contact-info-item p {
+    font-size: 10px;
+  }
+}
+.seccion-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ==========================
+VOLUNTTER
+==========================*/
+.volunteer-section {
+  width: calc(100% - 40px);
+  max-width: 1295px;
+  margin: 0 auto;
+  padding: 35px 35px 50px;
+
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.volunteer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+
+  margin-bottom: 35px;
+}
+
+.volunteer-title span {
+  width: 260px;
+  height: 3px;
+  background-color: #5c8fe0;
+}
+
+.volunteer-title h2 {
+  color: #5c8fe0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.volunteer-intro {
+  max-width: 900px;
+  margin: 0 auto 55px;
+
+  color: #5c8fe0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.volunteer-item {
+  text-align: center;
+}
+
+.volunteer-box {
+  min-height: 145px;
+  padding: 25px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+
+  background-color: #5c8fe0;
+  border-radius: 18px;
+
+  color: #ffffff;
+}
+
+.volunteer-icon {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+
+  font-size: 40px;
+}
+
+.volunteer-box h3 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.volunteer-box strong {
+  display: block;
+
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.volunteer-item h4 {
+  margin: 35px 0 20px;
+
+  color: #5c8fe0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.volunteer-item > p {
+  max-width: 450px;
+  margin: 0 auto 25px;
+
+  color: #00152f;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.volunteer-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #00152f;
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.volunteer-button span {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #00152f;
+  border-radius: 50%;
+
+  font-size: 24px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-title span {
+    width: 80px;
+  }
+
+  .volunteer-box {
+    flex-direction: column;
+  }
+}
+/* =========================
+   HOME RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Contenedores principales */
+  .home,
+  .home-container,
+  .home-section,
+  .hero,
+  .hero-container,
+  .section-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Si tienes secciones en dos columnas */
+  .hero-container,
+  .home-container,
+  .section-container {
+    flex-direction: column !important;
+  }
+
+  /* Textos */
+  .hero-content,
+  .home-content,
+  .section-content {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    text-align: center;
+  }
+
+  /* Imágenes */
+  .hero-image,
+  .home-image,
+  .section-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-image img,
+  .home-image img,
+  .section-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE FINAL - SOBRESCRIBE REGLAS DUPLICADAS
+========================================================= */
+@media (max-width: 850px) {
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    flex-direction: column;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    min-height: 390px;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 520px;
+    padding: 45px 24px;
+  }
+  .hero-right { min-height: 430px; }
+
+  .about-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 35px auto;
+    padding: 25px 20px;
+    flex-direction: column;
+  }
+  .about-image { width: 100%; height: 340px; }
+  .about-content {
+    width: calc(100% - 30px);
+    margin: -35px auto 0;
+    padding: 35px 24px;
+  }
+
+  .values-section,
+  .donation-section,
+  .location-section,
+  .volunteer-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .values-section { padding: 45px 24px 35px; }
+  .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 65px 25px; }
+  .programs-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 45px 30px; }
+  .donation-section { grid-template-columns: 1fr; padding: 35px 24px; }
+  .location-section { grid-template-columns: 1fr; }
+  .seccion-contenido { flex-direction: column; }
+  .volunteer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero-left { min-height: 340px; }
+  .hero-right { min-height: 320px; }
+  .hero-content { padding: 35px 20px; }
+  .hero-content h2 { font-size: 18px; }
+  .hero-content p { font-size: 14px; line-height: 1.55; }
+
+  .banner-section { width: 100%; height: 280px; }
+
+  .about-section { padding: 20px 15px; }
+  .about-image { height: 280px; }
+  .about-content { width: calc(100% - 20px); margin-top: -25px; padding: 30px 20px; }
+  .about-content h2 { font-size: 23px; }
+  .about-content p { font-size: 15px; line-height: 1.45; }
+
+  .values-section { padding: 40px 18px 30px; }
+  .values-grid { grid-template-columns: 1fr; gap: 65px; }
+  .values-header p { font-size: 13px; }
+
+  .programs-section { padding: 45px 18px; }
+  .programs-container { grid-template-columns: 1fr; }
+  .program-image, .program-pill { width: min(260px, 100%); }
+  .program-image { height: 260px; }
+
+  .donation-section { padding: 30px 18px; }
+  .donation-card img { height: 200px; }
+
+  .testimonial-section { padding: 32px 18px; flex-direction: column; }
+  .testimonial-content { text-align: center; }
+
+  .location-map,
+  .location-map iframe { min-height: 300px; }
+  .location-info { padding: 35px 22px; gap: 25px; }
+
+  .contact-section { padding: 38px 18px 45px; }
+  .contact-info { grid-template-columns: 1fr; }
+  .contact-info-item { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); padding: 14px 0; }
+
+  .volunteer-section { padding: 35px 18px 45px; }
+  .volunteer-title { gap: 15px; }
+  .volunteer-title span { width: 45px; }
+  .volunteer-box { padding: 25px 18px; gap: 20px; }
+}
+
+@media (max-width: 420px) {
+  .hero-left { min-height: 320px; }
+  .hero-right { min-height: 280px; }
+  .shape-one, .shape-two { width: 125px; height: 125px; }
+  .shape-three { width: 95px; height: 95px; }
+  .about-image { height: 240px; }
+  .program-image { height: 230px; }
+  .donation-card img { height: 180px; }
+}

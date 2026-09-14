@@ -1,0 +1,988 @@
+/* =========================================================
+   CEM PAQUI - ESTILOS GENERALES
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.cempaqui-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+  color: #111111;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   1. PRESENTACIÓN PRINCIPAL
+   LOGO + RECUADRO AZUL
+========================================================= */
+
+.cempaqui-page .cem-presentacion {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 60px 40px;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  align-items: center;
+  gap: 60px;
+}
+
+
+/* LOGO */
+
+.cempaqui-page .cem-presentacion-logo {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cempaqui-page .cem-presentacion-logo img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* INFORMACIÓN */
+
+.cempaqui-page .cem-presentacion-info {
+  width: 100%;
+
+  padding: 45px 50px;
+
+  background-color: #578bdd;
+  color: #ffffff;
+
+  border-radius: 35px;
+
+  text-align: center;
+}
+
+.cempaqui-page .cem-presentacion-info h1 {
+  margin: 0 0 25px;
+
+  font-size: 30px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.cempaqui-page .cem-presentacion-info p {
+  margin: 0 0 18px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  text-align: justify;
+}
+
+.cempaqui-page .cem-presentacion-info p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   2. GALERÍA PRINCIPAL
+========================================================= */
+
+.cempaqui-page .cem-galeria-principal {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+
+  gap: 25px;
+
+  padding: 20px 0;
+}
+
+.cempaqui-page .cem-galeria-principal img {
+  width: 100%;
+  height: 420px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   3. NUESTRA HISTORIA
+========================================================= */
+
+.cempaqui-page .cem-historia {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 45px 40px 60px;
+}
+
+.cempaqui-page .cem-historia h2 {
+  margin: 0 0 35px;
+
+  color: #578bdd;
+
+  font-size: 30px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.cempaqui-page .cem-texto {
+  width: 100%;
+
+  color: #111111;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+.cempaqui-page .cem-texto p {
+  margin: 0 0 25px;
+}
+
+.cempaqui-page .cem-texto p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   4. TRAYECTORIA
+========================================================= */
+
+.cempaqui-page .cem-trayectoria {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  align-items: stretch;
+
+  background-color: #edf3fb;
+}
+
+
+/* TEXTO */
+
+.cempaqui-page .cem-trayectoria-texto {
+  width: 100%;
+
+  padding: 55px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #111111;
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  text-align: justify;
+}
+
+.cempaqui-page .cem-trayectoria-texto p {
+  margin: 0 0 25px;
+}
+
+.cempaqui-page .cem-trayectoria-texto p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   5. COLLAGE
+========================================================= */
+
+.cempaqui-page .cem-collage {
+  width: 100%;
+
+  padding: 40px 25px 40px 0;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 200px 290px;
+
+  gap: 25px;
+}
+
+
+/* CUADRO AZUL */
+
+.cempaqui-page .cem-cuadro-azul {
+  grid-column: 1;
+  grid-row: 1;
+
+  background-color: #578bdd;
+}
+
+
+/* FOTO GRANDE */
+
+.cempaqui-page .cem-collage-grande {
+  width: 100%;
+  height: 100%;
+
+  grid-column: 1;
+  grid-row: 2;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* IMÁGENES DERECHA */
+
+.cempaqui-page .cem-collage-derecha {
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 25px;
+}
+
+.cempaqui-page .cem-collage-derecha img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   6. NACIMIENTO DE CEM PAQUI
+========================================================= */
+
+.cempaqui-page .cem-nacimiento {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 60px 45px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: start;
+
+  gap: 90px;
+}
+
+.cempaqui-page .cem-nacimiento-columna {
+  width: 100%;
+
+  align-self: start;
+
+  color: #111111;
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  text-align: justify;
+}
+
+.cempaqui-page .cem-nacimiento-columna p {
+  margin: 0 0 20px;
+}
+
+.cempaqui-page .cem-nacimiento-columna p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   7. IMAGEN DESTACADA
+========================================================= */
+
+.cempaqui-page .cem-imagen-destacada {
+  width: calc(100% - 20px);
+
+  margin: 0 auto;
+
+  border: 1px solid #dddddd;
+}
+
+.cempaqui-page .cem-imagen-destacada img {
+  width: 100%;
+  height: 520px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   8. DESCRIPCIÓN BAJO LA IMAGEN
+========================================================= */
+
+.cempaqui-page .cem-descripcion {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 35px 30px;
+
+  color: #071a36;
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  text-align: center;
+}
+
+.cempaqui-page .cem-descripcion p {
+  margin: 0 0 20px;
+}
+
+.cempaqui-page .cem-descripcion p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   9. PROPUESTAS
+========================================================= */
+
+.cempaqui-page .cem-propuestas {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 30px 35px 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  /*
+    MUY IMPORTANTE:
+    Hace que ambas columnas tengan la misma altura.
+  */
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CADA PROPUESTA
+========================================================= */
+
+.cempaqui-page .cem-propuesta {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ICONO
+========================================================= */
+
+.cempaqui-page .cem-icono {
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #578bdd;
+
+  font-size: 65px;
+
+  opacity: 0.25;
+}
+
+
+/* =========================================================
+   CAJA AZUL DE PROPUESTA
+========================================================= */
+
+.cempaqui-page .cem-titulo-caja {
+  width: 100%;
+  min-height: 150px;
+
+  padding: 25px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #578bdd;
+  color: #ffffff;
+
+  border-radius: 25px;
+}
+
+.cempaqui-page .cem-titulo-caja span {
+  font-size: 24px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.cempaqui-page .cem-titulo-caja strong {
+  margin-top: 5px;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TÍTULO PROPUESTA
+========================================================= */
+
+.cempaqui-page .cem-propuesta h3 {
+  margin: 40px 0 25px;
+
+  color: #578bdd;
+
+  font-size: 27px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TEXTO PROPUESTA
+========================================================= */
+
+.cempaqui-page .cem-propuesta > p {
+  width: 100%;
+  max-width: 520px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #071a36;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  text-align: justify;
+}
+
+
+/* CHECK */
+
+.cempaqui-page .cem-check {
+  margin-top: 25px !important;
+
+  text-align: left !important;
+}
+
+
+/* =========================================================
+   10. BOTÓN ME INTERESA
+========================================================= */
+
+.cempaqui-page .cem-interesa {
+  /*
+    ESTO ES LO QUE PONE LOS DOS BOTONES
+    EXACTAMENTE AL MISMO NIVEL.
+  */
+  margin-top: auto;
+
+  padding-top: 35px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  color: #071a36;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+
+/* CÍRCULO */
+
+.cempaqui-page .cem-flecha {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #071a36;
+  border-radius: 50%;
+
+  color: #071a36;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  line-height: 1;
+
+  transition: 0.3s;
+}
+
+
+/* HOVER */
+
+.cempaqui-page .cem-interesa:hover {
+  color: #578bdd;
+}
+
+.cempaqui-page .cem-interesa:hover .cem-flecha {
+  color: #ffffff;
+
+  background-color: #578bdd;
+
+  border-color: #578bdd;
+}
+
+
+/* =========================================================
+   11. REDES SOCIALES
+========================================================= */
+
+.cempaqui-page .cem-redes {
+  width: 100%;
+
+  position: relative;
+
+  padding-top: 60px;
+}
+
+
+/* TÍTULO */
+
+.cempaqui-page .cem-redes-titulo {
+  width: fit-content;
+  max-width: 90%;
+
+  margin: 0 auto;
+
+  padding: 22px 40px;
+
+  position: relative;
+
+  z-index: 2;
+
+  background-color: #001733;
+  color: #ffffff;
+
+  border-radius: 22px;
+
+  font-size: 27px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+
+/* FONDO AZUL */
+
+.cempaqui-page .cem-redes-fondo {
+  width: 100%;
+  height: 150px;
+
+  margin-top: -25px;
+
+  background-color: #578bdd;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .cempaqui-page .cem-presentacion {
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 40px;
+
+    padding: 45px 25px;
+  }
+
+  .cempaqui-page .cem-presentacion-logo img {
+    max-width: 260px;
+  }
+
+  .cempaqui-page .cem-galeria-principal {
+    gap: 15px;
+  }
+
+  .cempaqui-page .cem-galeria-principal img {
+    height: 340px;
+  }
+
+  .cempaqui-page .cem-trayectoria {
+    grid-template-columns: 1fr;
+  }
+
+  .cempaqui-page .cem-collage {
+    padding: 25px;
+  }
+
+  .cempaqui-page .cem-nacimiento {
+    gap: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* PRESENTACIÓN */
+
+  .cempaqui-page .cem-presentacion {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 35px 20px;
+  }
+
+  .cempaqui-page .cem-presentacion-logo img {
+    max-width: 220px;
+  }
+
+  .cempaqui-page .cem-presentacion-info {
+    padding: 30px 25px;
+  }
+
+  .cempaqui-page .cem-presentacion-info h1 {
+    font-size: 25px;
+  }
+
+  .cempaqui-page .cem-presentacion-info p {
+    font-size: 15px;
+
+    text-align: left;
+  }
+
+
+  /* GALERÍA */
+
+  .cempaqui-page .cem-galeria-principal {
+    grid-template-columns: 1fr;
+
+    padding: 15px;
+  }
+
+  .cempaqui-page .cem-galeria-principal img {
+    height: 280px;
+  }
+
+
+  /* HISTORIA */
+
+  .cempaqui-page .cem-historia {
+    padding: 35px 25px;
+  }
+
+  .cempaqui-page .cem-historia h2 {
+    font-size: 25px;
+  }
+
+  .cempaqui-page .cem-texto {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: left;
+  }
+
+
+  /* TRAYECTORIA */
+
+  .cempaqui-page .cem-trayectoria {
+    grid-template-columns: 1fr;
+  }
+
+  .cempaqui-page .cem-trayectoria-texto {
+    padding: 35px 25px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: left;
+  }
+
+
+  /* COLLAGE */
+
+  .cempaqui-page .cem-collage {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .cempaqui-page .cem-cuadro-azul {
+    height: 120px;
+  }
+
+  .cempaqui-page .cem-collage-grande {
+    height: 280px;
+  }
+
+  .cempaqui-page .cem-collage-derecha {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 220px;
+
+    gap: 15px;
+  }
+
+  .cempaqui-page .cem-collage-derecha img {
+    height: 220px;
+  }
+
+
+  /* NACIMIENTO */
+
+  .cempaqui-page .cem-nacimiento {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 40px 25px;
+  }
+
+  .cempaqui-page .cem-nacimiento-columna {
+    font-size: 16px;
+
+    text-align: left;
+  }
+
+
+  /* IMAGEN DESTACADA */
+
+  .cempaqui-page .cem-imagen-destacada {
+    width: 100%;
+  }
+
+  .cempaqui-page .cem-imagen-destacada img {
+    height: 300px;
+  }
+
+
+  /* DESCRIPCIÓN */
+
+  .cempaqui-page .cem-descripcion {
+    padding: 30px 25px;
+
+    font-size: 16px;
+
+    text-align: left;
+  }
+
+
+  /* PROPUESTAS */
+
+  .cempaqui-page .cem-propuestas {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    padding: 30px 20px 60px;
+  }
+
+  .cempaqui-page .cem-icono {
+    height: 90px;
+
+    font-size: 55px;
+  }
+
+  .cempaqui-page .cem-titulo-caja {
+    min-height: 130px;
+
+    padding: 25px 15px;
+  }
+
+  .cempaqui-page .cem-titulo-caja span {
+    font-size: 20px;
+  }
+
+  .cempaqui-page .cem-titulo-caja strong {
+    font-size: 27px;
+  }
+
+  .cempaqui-page .cem-propuesta h3 {
+    margin-top: 30px;
+
+    font-size: 24px;
+  }
+
+  .cempaqui-page .cem-propuesta > p {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: left;
+  }
+
+
+  /*
+    En celular ya no importa que los botones estén
+    alineados horizontalmente porque las tarjetas
+    aparecen una debajo de otra.
+  */
+
+  .cempaqui-page .cem-interesa {
+    margin-top: 30px;
+
+    padding-top: 0;
+  }
+
+
+  /* REDES */
+
+  .cempaqui-page .cem-redes-titulo {
+    padding: 20px 25px;
+
+    font-size: 20px;
+  }
+
+  .cempaqui-page .cem-redes-fondo {
+    height: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .cempaqui-page .cem-presentacion {
+    padding: 30px 15px;
+  }
+
+  .cempaqui-page .cem-presentacion-info {
+    padding: 25px 20px;
+  }
+
+  .cempaqui-page .cem-presentacion-info h1 {
+    font-size: 23px;
+  }
+
+  .cempaqui-page .cem-presentacion-info p {
+    font-size: 14px;
+  }
+
+  .cempaqui-page .cem-historia {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cempaqui-page .cem-collage {
+    padding: 15px;
+  }
+
+  .cempaqui-page .cem-collage-derecha {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: 220px 220px;
+  }
+
+  .cempaqui-page .cem-collage-derecha img {
+    height: 220px;
+  }
+
+  .cempaqui-page .cem-nacimiento {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cempaqui-page .cem-descripcion {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cempaqui-page .cem-titulo-caja strong {
+    font-size: 24px;
+  }
+
+  .cempaqui-page .cem-redes-titulo {
+    font-size: 18px;
+  }
+
+}
+
+/* RESPONSIVE FINAL */
+@media (max-width: 768px) {
+  .cempaqui-page { overflow-x: hidden; }
+  .cempaqui-page .cem-presentacion { grid-template-columns: 1fr; gap: 24px; padding: 32px 18px; }
+  .cempaqui-page .cem-presentacion-info { padding: 28px 22px; border-radius: 24px; }
+  .cempaqui-page .cem-galeria-principal { grid-template-columns: 1fr; padding: 12px 18px; }
+  .cempaqui-page .cem-trayectoria { grid-template-columns: 1fr; }
+  .cempaqui-page .cem-nacimiento, .cempaqui-page .cem-propuestas { grid-template-columns: 1fr; }
+  .cempaqui-page .cem-imagen-destacada { width: 100%; }
+}
+@media (max-width: 480px) {
+  .cempaqui-page .cem-galeria-principal img,
+  .cempaqui-page .cem-collage-grande,
+  .cempaqui-page .cem-imagen-destacada img { height: 240px; }
+}
