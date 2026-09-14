@@ -53,12 +53,9 @@ function Footer() {
           <h3>Aliados
           </h3>
 
-          <a href="#">Empresa 1</a>
-          <a href="#">Empresa 2</a>
-          <a href="#">Empresa 3</a>
-          <a href="#">Empresa 4</a>
-          <a href="#">Empresa 5</a>
-          <a href="#">Empresa 6</a>
+          <a href="#">Grupo Indigo</a>
+          <a href="#">Casa Esperanza</a>
+          
         </div>
 
         

@@ -6,13 +6,12 @@ export function Hero() {
     <section className="hero" id="inicio">
       <div className="hero-left">
         <div className="hero-content">
-          <h2>TEXTO DE APOYO</h2>
+          <h2>FUNDACIÓN GRANDES TALENTOS ÍNDIGO A.C.</h2>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            EN NUESTRO PROPOSITO MAS ALTO VENIMOS AL MUNDO A SERVIR, 
+            SI TE HAZ VINCULADO A ESTA INICIATIVA ERES ALGUIEN AFORTUNADO, 
+            UNETE A NOSOTROS Y CAMBIEMOS EL MUNDO JUNTOS, TE NECESITAMOS
           </p>
 
           <a
@@ -45,38 +44,32 @@ export function Hero() {
 
 const values = [
   {
-    title: "TEXTO DE APOYO",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Inspiración",
+    text: "A nosotros nos inspira la misión de contruir un país con mayores oportunidades.",
   },
   {
-    title: "TEXTO DE APOYO",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Objetivo",
+    text: "Buscamos invitar a toda la sociedad a participar en causas que apoyen al bien común y que contribuyan a elevar su calidad de vida.",
   },
   {
-    title: "TEXTO DE APOYO",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "vision ",
+    text: "Estamos convencidos de que también construimos un lugar donde todos estemos orgullosos de trabajar. Por eso, la importancia y trascendencia de este código de ética.",
   },
   {
-    title: "TEXTO DE APOYO",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Compromiso",
+    text: "Sabemos que nuestro compromiso con la integridad, el respeto, la diversidad y la inclusión en cada una de nuestras decisiones es la mejor forma de dar testimonio y cumplir con nuestra misión.",
   },
-  {
-    title: "TEXTO DE APOYO",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
+ 
 ];
 
 export function ValuesSection() {
   return (
     <section className="values-section" id="valores">
       <div className="values-header">
-        <h2>TEXTO DE APOYO</h2>
+        <h2>TE INVITAMOS A SUMARTE</h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.
+
         </p>
       </div>
 
@@ -127,8 +120,9 @@ export function ProgramsSection() {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Inscribete a nuestro programa para surtir 
+           una carta de Navidad o Reyes magos de un niño o niña cuya situacion sea muy precaria y un jueguete le recuerde que un poder mas grande nos cuida y nos escucha 
+           silentemente para obrar en milagros.
           </p>
 
         </div>
@@ -148,8 +142,10 @@ export function ProgramsSection() {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Te haz preguntado la diferencia que 
+            puede hacer la alimentacion, un buen mentor, 
+            clases especializadas, la detección temprana de un talento?, hemos seleccionado perfiles que tienen requerimientos específicos y que con tu apoyo sus condiciones seran las adecuadas para incidir 
+            positivamente en su entorno.
           </p>
 
         </div>
@@ -169,8 +165,9 @@ export function ProgramsSection() {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            En alianza con SFM reclutamos, 
+            entrenamos y formamos adolscentes capaces de competir en LEGO LEAGUES en Estados Unidos capaces de diseñar, fabricar y construir sus propios robots. UNETE, estamos 
+            formando jovenes que programen el nuevo siglo
           </p>
 
         </div>
