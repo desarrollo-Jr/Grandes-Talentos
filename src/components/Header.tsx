@@ -23,14 +23,7 @@ function Header() {
 
         <Navbar />
 
-        <div className="search-box">
-          <span>⌕</span>
-
-          <input
-            type="text"
-            placeholder="BUSCAR"
-          />
-        </div>
+        
 
       </div>
     </header>

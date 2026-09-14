@@ -4,38 +4,55 @@ import Footer from "../components/Footer";
 import {
   Hero,
   BannerSection,
-  AboutSection,
   ValuesSection,
   ProgramsSection,
-  DonationCards,
-  TestimonialSection,
+  //DonationCards,
   LocationSection,
   ContactSection,
 } from "../components/HomeSections";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+
+      setTimeout(() => {
+        const section = document.getElementById(id);
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <Header />
-    
+
       <Hero />
 
-      <AboutSection />
-
-      <ValuesSection />
+      
 
       <ProgramsSection />
 
-      <DonationCards />
+      <ValuesSection />
+
+      {/*<DonationCards */}
 
       <BannerSection />
-
-      <TestimonialSection />
 
       <ContactSection />
 
       <LocationSection />
-
 
       <Footer />
     </>
@@ -43,4 +60,3 @@ function Home() {
 }
 
 export default Home;
-

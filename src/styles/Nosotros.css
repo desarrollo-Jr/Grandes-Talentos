@@ -1,0 +1,305 @@
+/* =========================================
+   PÁGINA NOSOTROS
+========================================= */
+
+.nosotros-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SECCIÓN NOSOTROS
+========================================= */
+
+.nosotros-section {
+  width: 100%;
+
+  padding: 70px 20px 55px;
+
+  background-color: #ffffff;
+}
+
+.nosotros-container {
+  width: 100%;
+  max-width: 1050px;
+
+  min-height: 410px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.nosotros-image {
+  width: 55%;
+  height: 410px;
+
+  overflow: hidden;
+}
+
+.nosotros-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================
+   CUADRO AZUL
+========================================= */
+
+.nosotros-card {
+  position: absolute;
+
+  width: 52%;
+
+  top: 35px;
+  right: 0;
+
+  padding: 38px 42px;
+
+  background-color: #538df5;
+
+  color: #ffffff;
+
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.13);
+}
+
+.nosotros-card h1 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.nosotros-card p {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+.nosotros-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   NUESTRO PROPÓSITO
+========================================= */
+
+.proposito-section {
+  width: 100%;
+
+  padding: 55px 20px;
+
+  background-color: #001a3d;
+
+  color: #ffffff;
+}
+
+.proposito-container {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 35% 65%;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+
+/* =========================================
+   TÍTULO PROPÓSITO
+========================================= */
+
+.proposito-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.proposito-title h2 {
+  margin: 0;
+
+  color: #538df5;
+
+  font-size: 32px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.proposito-title h2 span {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 18px;
+}
+
+.proposito-line {
+  width: 85px;
+  height: 3px;
+
+  margin-top: 16px;
+
+  background-color: #538df5;
+}
+
+
+/* =========================================
+   TEXTO PROPÓSITO
+========================================= */
+
+.proposito-text {
+  max-width: 500px;
+}
+
+.proposito-text p {
+  margin: 0 0 14px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  line-height: 1.55;
+
+  text-align: justify;
+}
+
+.proposito-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nosotros-container {
+    min-height: auto;
+  }
+
+  .nosotros-image {
+    width: 100%;
+    height: 420px;
+  }
+
+  .nosotros-card {
+    position: relative;
+
+    width: 90%;
+
+    top: auto;
+    right: auto;
+
+    margin: -70px auto 0;
+  }
+
+
+  .proposito-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .proposito-title {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .proposito-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+  .nosotros-section {
+    padding: 35px 15px 45px;
+  }
+
+  .nosotros-image {
+    height: 300px;
+  }
+
+  .nosotros-card {
+    width: 100%;
+
+    margin-top: 0;
+
+    padding: 30px 22px;
+  }
+
+  .nosotros-card h1 {
+    font-size: 22px;
+  }
+
+  .nosotros-card p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+
+  .proposito-section {
+    padding: 45px 20px;
+  }
+
+  .proposito-container {
+    gap: 30px;
+  }
+
+  .proposito-title h2 {
+    font-size: 27px;
+  }
+
+  .proposito-title h2 span {
+    font-size: 17px;
+  }
+
+  .proposito-text p {
+    font-size: 12px;
+
+    text-align: left;
+  }
+}

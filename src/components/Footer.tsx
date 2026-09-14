@@ -19,9 +19,13 @@ function Footer() {
 
         
         <div className="footer-column">
-          <h3>Transparencia</h3>
+          <h3>
+            Transparencia
+            </h3>
 
-          <Link to="/nosotros">Nosotros</Link>
+          <Link to="/nosotros">
+          Nosotros
+          </Link>
 
           <Link to="/derechos-humanos">
             Derechos Humanos
@@ -46,7 +50,8 @@ function Footer() {
 
         
         <div className="footer-column">
-          <h3>Aliados</h3>
+          <h3>Aliados
+          </h3>
 
           <a href="#">Empresa 1</a>
           <a href="#">Empresa 2</a>

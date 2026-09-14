@@ -1,73 +1,145 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
 
-
-/* =========================
-   HOME
-========================= */
-.hero {
-  width: calc(100% - 40px);
-  max-width: 1295px;
-  min-height: 600px;
-
-  margin: 0 auto;
-
-  display: flex;
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* =========================
-   COLUMNA IZQUIERDA
-========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  width: 100%;
+  max-width: none;
+
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO - COLUMNA IZQUIERDA
+========================================================= */
 
 .hero-left {
   position: relative;
-  width: 37.5%;
-  min-height: 600px;
+
+  width: 40%;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  margin: 0;
+  padding: 0;
+
   background-color: #00152f;
+  color: #ffffff;
+
   overflow: hidden;
 }
+
+
+/* =========================================================
+   HERO - CONTENIDO
+========================================================= */
+
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   width: 80%;
   max-width: 390px;
 
+  margin: 0 auto;
+  padding: 40px;
+
   text-align: center;
+
   color: #ffffff;
 }
 
 .hero-content h2 {
-  margin-bottom: 15px;
+  margin: 0 0 15px;
+
+  color: #ffffff;
 
   font-size: 15px;
   font-weight: 800;
 }
 
 .hero-content p {
-  margin-bottom: 30px;
+  margin: 0 0 30px;
+
+  color: #ffffff;
 
   font-size: 12px;
   line-height: 1.4;
 }
 
-/* BOTÓN */
+
+/* =========================================================
+   HERO - BOTÓN
+========================================================= */
 
 .hero-button {
   display: inline-block;
 
+  margin-top: 20px;
   padding: 12px 25px;
 
   border: 1px solid #ffffff;
   border-radius: 25px;
 
+  background-color: transparent;
+
   color: #ffffff;
 
   font-size: 11px;
   text-decoration: none;
+
+  cursor: pointer;
 
   transition: 0.3s ease;
 }
@@ -77,9 +149,10 @@
   color: #00152f;
 }
 
-/* =========================
-   FIGURAS IZQUIERDA
-========================= */
+
+/* =========================================================
+   HERO - DECORACIÓN IZQUIERDA
+========================================================= */
 
 .decoration {
   position: absolute;
@@ -94,43 +167,57 @@
   width: 95px;
   height: 95px;
 
-  bottom: 95px;
   right: 125px;
+  bottom: 95px;
 }
 
 .decoration-two {
   width: 95px;
   height: 95px;
 
-  bottom: 115px;
   right: 25px;
+  bottom: 115px;
 }
 
 .decoration-three {
   width: 42px;
   height: 42px;
 
-  bottom: 20px;
   right: 150px;
+  bottom: 20px;
 }
 
-/* =========================
-   COLUMNA DERECHA
-========================= */
+
+/* =========================================================
+   HERO - COLUMNA DERECHA
+========================================================= */
 
 .hero-right {
   position: relative;
-  width: 62.5%;
-  min-height: 600px;
+
+  width: 60%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
 
   overflow: hidden;
 
-  background-image: url("../assets/images/hero.jpg");
+  background-color: #5c8fe0;
+
+  /*
+    Si tu imagen está en public/hero.webp
+    deja esta ruta.
+  */
+  background-image: url("/hero.webp");
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Capa azul parecida a la maqueta */
+
+/* CAPA AZUL */
 
 .hero-right::before {
   content: "";
@@ -138,12 +225,17 @@
   position: absolute;
   inset: 0;
 
+  z-index: 1;
+
   background-color: rgba(50, 105, 180, 0.22);
+
+  pointer-events: none;
 }
 
-/* =========================
-   FIGURAS DERECHA
-========================= */
+
+/* =========================================================
+   HERO - FIGURAS DERECHA
+========================================================= */
 
 .hero-shape {
   position: absolute;
@@ -152,6 +244,8 @@
   border-radius: 50%;
 
   background-color: rgba(241, 235, 216, 0.45);
+
+  pointer-events: none;
 }
 
 .shape-one {
@@ -166,95 +260,35 @@
   width: 185px;
   height: 185px;
 
-  bottom: 35px;
   right: 40px;
+  bottom: 35px;
 }
 
 .shape-three {
   width: 145px;
   height: 145px;
 
-  bottom: 5px;
   left: 48%;
+  bottom: 5px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width: 850px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 100%;
-  }
-
-  .hero-left {
-    min-height: 400px;
-  }
-
-  .hero-right {
-    min-height: 450px;
-  }
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-  width: 100%;
-  min-height: 600px;
-  display: flex;
-}
-
-.hero-left {
-  width: 40%;
-  background-color: #00152f;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
-  padding: 40px;
-  text-align: center;
-}
-
-.hero-right {
-  width: 60%;
-  background-color: #5c8fe0;
-
-  background-image: url("/hero.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-
-  border: 1px solid white;
-  border-radius: 25px;
-
-  color: white;
-  text-decoration: none;
-}
-/* =========================
+/* =========================================================
    BANNER
-========================= */
+========================================================= */
+
 .banner-section {
-  top: 4206px;
-  left: 0px;
-  width: 920px;
+  width: 100%;
+  max-width: none;
+
   height: 836px;
-/* UI Properties */
-opacity: 1;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  opacity: 1;
 }
 
 .banner-video {
@@ -263,63 +297,59 @@ opacity: 1;
 
   display: block;
 
+  margin: 0;
+  padding: 0;
+
   object-fit: cover;
   object-position: center;
 }
 
-@media (max-width: 900px) {
-  .banner-section {
-    height: 450px;
-  }
-}
 
-@media (max-width: 600px) {
-  .banner-section {
-    width: 100%;
-    height: 300px;
-  }
-}
-
-/* =========================
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
+
 .about-section {
   width: calc(100% - 40px);
   max-width: 1295px;
 
   margin: 70px auto;
 
+  padding: 40px 55px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 40px 55px;
 
   background-color: #ffffff;
 }
 
 
-/* =========================
-   IMAGEN
-========================= */
+/* =========================================================
+   ABOUT - IMAGEN
+========================================================= */
 
 .about-image {
   width: 55%;
   height: 460px;
 
+  flex-shrink: 0;
+
   background-image: url("/about.jpg");
   background-size: cover;
   background-position: center;
-
-  flex-shrink: 0;
+  background-repeat: no-repeat;
 }
 
 
-/* =========================
-   CUADRO AZUL
-========================= */
+/* =========================================================
+   ABOUT - CONTENIDO
+========================================================= */
 
 .about-content {
+  position: relative;
+  z-index: 2;
+
   width: 55%;
   min-height: 380px;
 
@@ -332,40 +362,28 @@ opacity: 1;
   justify-content: center;
 
   background-color: #5c8fe0;
+
   color: #ffffff;
 
   text-align: center;
-
-  position: relative;
-  z-index: 2;
 }
-
-
-/* =========================
-   TITULO
-========================= */
 
 .about-content h2 {
   margin: 0 0 25px;
 
+  color: #ffffff;
+
   font-size: 28px;
   font-weight: 800;
-
-  color: #ffffff;
 }
-
-
-/* =========================
-   TEXTO
-========================= */
 
 .about-content p {
   margin: 0 0 22px;
 
+  color: #ffffff;
+
   font-size: 18px;
   line-height: 1.25;
-
-  color: #ffffff;
 }
 
 .about-content p:last-child {
@@ -374,51 +392,15 @@ opacity: 1;
 
 
 /* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 850px) {
-
-  .about-section {
-    flex-direction: column;
-
-    padding: 30px 20px;
-    margin: 40px auto;
-  }
-
-  .about-image {
-    width: 100%;
-    height: 350px;
-  }
-
-  .about-content {
-    width: 90%;
-    min-height: auto;
-
-    margin-left: -40px;
-    margin-top: -40px;
-
-    padding: 35px 25px;
-  }
-
-  .about-content h2 {
-    font-size: 24px;
-  }
-
-  .about-content p {
-    font-size: 16px;
-  }
-}
-/* =========================
    VALUES
 ========================= */
 
-
 .values-section {
-  width: calc(100% - 80px);
-  max-width: 1295px;
-  margin: 50px auto;
-  padding: 55px 70px 80px;
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 45px 70px 35px;
 
   position: relative;
 
@@ -429,11 +411,16 @@ opacity: 1;
 /* ENCABEZADO */
 
 .values-header {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
   text-align: center;
 }
 
 .values-header h2 {
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 
   color: #5c8fe0;
 
@@ -443,6 +430,7 @@ opacity: 1;
 
 .values-header p {
   max-width: 1100px;
+
   margin: 0 auto;
 
   color: #ffffff;
@@ -454,171 +442,14 @@ opacity: 1;
 /* TARJETAS */
 
 .values-grid {
-  
+  width: 100%;
+  max-width: 1200px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-
-  align-items: end;
-}
-
-.value-card {
-  min-height: 190px;
-
-  position: relative;
-
-  padding: 55px 18px 25px;
-
-  background-color: #5c8fe0;
-
-  border-radius: 8px;
-
-  text-align: center;
-}
-
-/* CÍRCULO SUPERIOR */
-
-.value-icon {
-  width: 90px;
-  height: 90px;
-
-  position: absolute;
-
-  top: -43px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #5c8fe0;
-
-  border-radius: 50%;
-}
-
-.value-icon span {
-  width: 58px;
-  height: 58px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-
-  color: #ffffff;
-  font-size: 30px;
-}
-
-.value-card h3 {
-  margin-bottom: 15px;
-
-  color: #ffffff;
-
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.value-card p {
-  color: #ffffff;
-
-  font-size: 9px;
-  line-height: 1.3;
-}
-
-/* TEXTO AMARILLO */
-
-.values-label {
-  margin-top: 20px;
-  margin-right: 10px;
-
-  text-align: right;
-
-  color: #fff200;
-
-  font-size: 14px;
-  font-weight: 900;
-
-  line-height: 1;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 992px) {
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 70px;
-  }
-}
-
-@media (max-width: 700px) {
-  .values-section {
-    padding: 35px 20px;
-  }
-
-  .values-grid {
-    grid-template-columns: 1fr;
-    gap: 70px;
-  }
-
-  .values-label {
-    text-align: center;
-    margin-right: 0;
-  }
-}
-
-/* =========================
-   VALUES
-========================= */
-
-.values-section {
-  width: calc(100% - 40px);
-  max-width: 1295px;
-  margin: 0 auto;
-  padding: 35px 70px 20px;
-
-  position: relative;
-
-  background-color: #00152f;
-  color: #ffffff;
-}
-
-/* ENCABEZADO */
-
-.values-header {
-  text-align: center;
-}
-
-.values-header h2 {
-  margin-bottom: 30px;
-
-  color: #5c8fe0;
-
-  font-size: 22px;
-  font-weight: 800;
-}
-
-.values-header p {
-  max-width: 1100px;
-  margin: 0 auto;
-
-  color: #ffffff;
-
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* TARJETAS */
-
-.values-grid {
-  margin-top: 55px;
+  margin: 55px auto 0;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
   gap: 45px;
 
   align-items: end;
@@ -638,7 +469,7 @@ opacity: 1;
   text-align: center;
 }
 
-/* CÍRCULO SUPERIOR */
+/* CÍRCULO */
 
 .value-icon {
   width: 90px;
@@ -672,11 +503,12 @@ opacity: 1;
   border-radius: 50%;
 
   color: #ffffff;
+
   font-size: 30px;
 }
 
 .value-card h3 {
-  margin-bottom: 15px;
+  margin: 0 0 15px;
 
   color: #ffffff;
 
@@ -685,17 +517,18 @@ opacity: 1;
 }
 
 .value-card p {
+  margin: 0;
+
   color: #ffffff;
 
   font-size: 9px;
   line-height: 1.3;
 }
 
-/* TEXTO AMARILLO */
-
 .values-label {
-  margin-top: 20px;
-  margin-right: 10px;
+  max-width: 1200px;
+
+  margin: 20px auto 0;
 
   text-align: right;
 
@@ -707,52 +540,50 @@ opacity: 1;
   line-height: 1;
 }
 
-/* RESPONSIVE */
+/* TABLET */
 
 @media (max-width: 1050px) {
+
   .values-grid {
     grid-template-columns: repeat(3, 1fr);
+
     row-gap: 70px;
   }
 }
 
+/* CELULAR */
+
 @media (max-width: 700px) {
+
   .values-section {
-    padding: 35px 20px;
+    width: 100%;
+
+    padding: 45px 20px 35px;
   }
 
   .values-grid {
     grid-template-columns: 1fr;
+
     gap: 70px;
   }
 
   .values-label {
     text-align: center;
-    margin-right: 0;
   }
 }
 
-/* =========================
-   PROGRAMS
-========================= */
 
-/* =====================================
-   SECCIÓN PROGRAMAS
-===================================== */
+/* =========================================================
+   PROGRAMAS
+========================================================= */
 
 .programs-section {
   width: 100%;
-  background-color: #3f7ff5;
 
   padding: 65px 30px 60px;
 
-  box-sizing: border-box;
+  background-color: #3f7ff5;
 }
-
-
-/* =====================================
-   TITULO PROGRAMAS
-===================================== */
 
 .programs-title {
   margin: 0 0 35px;
@@ -767,11 +598,6 @@ opacity: 1;
   letter-spacing: 5px;
 }
 
-
-/* =====================================
-   CONTENEDOR DE LOS 3 PROGRAMAS
-===================================== */
-
 .programs-container {
   width: 100%;
   max-width: 1200px;
@@ -779,15 +605,16 @@ opacity: 1;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 65px;
 }
 
 
-/* =====================================
+/* =========================================================
    CADA PROGRAMA
-===================================== */
+========================================================= */
 
 .program-item {
   width: 100%;
@@ -798,11 +625,6 @@ opacity: 1;
 
   text-align: center;
 }
-
-
-/* =====================================
-   IMAGEN
-===================================== */
 
 .program-image {
   width: 225px;
@@ -816,11 +638,6 @@ opacity: 1;
   border-radius: 2px;
 }
 
-
-/* =====================================
-   BOTÓN / PASTILLA
-===================================== */
-
 .program-pill {
   width: 250px;
   min-height: 33px;
@@ -833,8 +650,6 @@ opacity: 1;
   align-items: center;
   justify-content: center;
 
-  box-sizing: border-box;
-
   background-color: #001c49;
 
   border-radius: 30px;
@@ -846,11 +661,6 @@ opacity: 1;
 
   text-align: center;
 }
-
-
-/* =====================================
-   TEXTO
-===================================== */
 
 .program-item p {
   max-width: 290px;
@@ -866,125 +676,103 @@ opacity: 1;
 }
 
 
-/* =====================================
-   TABLET
-===================================== */
+/* =========================================================
+   DONACIONES
+========================================================= */
 
-@media (max-width: 950px) {
-
-  .programs-container {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 50px;
-  }
-
-}
-
-
-/* =====================================
-   CELULAR
-===================================== */
-
-@media (max-width: 650px) {
-
-  .programs-section {
-    padding: 50px 20px;
-  }
-
-  .programs-container {
-    grid-template-columns: 1fr;
-
-    gap: 55px;
-  }
-
-  .program-image {
-    width: 260px;
-    height: 260px;
-  }
-
-  .program-pill {
-    width: 260px;
-  }
-
-  .program-item p {
-    max-width: 320px;
-  }
-
-}
-/* =========================
-   DONATIONS
-========================= */
 .donation-section {
   width: calc(100% - 40px);
   max-width: 1295px;
+
   margin: 0 auto;
+
   padding: 35px 70px 45px;
+
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 45px;
+
   background-color: #ffffff;
 }
 
-.donation-card { text-align: center; min-width: 0; }
+.donation-card {
+  min-width: 0;
+
+  text-align: center;
+}
 
 .donation-card img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
-  border-radius: 18px;
+
   display: block;
+
+  object-fit: cover;
+
+  border-radius: 18px;
 }
 
 .donation-card h2 {
   margin: 35px 0 22px;
+
   color: #5c8fe0;
+
   font-size: 22px;
   font-weight: 800;
 }
 
 .donation-card p {
   max-width: 500px;
+
   margin: 0 auto 25px;
+
   color: #00152f;
+
   font-size: 15px;
   line-height: 1.35;
 }
 
 .donation-button {
   display: inline-flex;
+
   align-items: center;
+
   gap: 10px;
+
   color: #00152f;
+
   font-size: 13px;
   font-weight: 800;
+
   text-decoration: none;
 }
 
 .donation-button span {
   width: 28px;
   height: 28px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 2px solid #00152f;
   border-radius: 50%;
+
   font-size: 24px;
   line-height: 1;
 }
 
-.donation-button:hover { opacity: 0.7; }
-
-@media (max-width: 850px) {
-  .donation-section {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-  }
-  .donation-card img { height: 220px; }
+.donation-button:hover {
+  opacity: 0.7;
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
+
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
+
 .testimonial-section {
   width: 100%;
   min-height: 150px;
@@ -998,14 +786,7 @@ opacity: 1;
   gap: 25px;
 
   background-color: #00152f;
-
-  box-sizing: border-box;
 }
-
-
-/* =========================
-   CONTENEDOR PERSONA
-========================= */
 
 .testimonial-person {
   display: flex;
@@ -1015,47 +796,32 @@ opacity: 1;
   flex-shrink: 0;
 }
 
-
-/* =========================
-   CÍRCULO AZUL
-========================= */
-
 .testimonial-circle {
   width: 110px;
   height: 110px;
-
-  border-radius: 50%;
-
-  background-color: #5c8fe0;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
 
+  flex-shrink: 0;
+
   overflow: hidden;
 
-  flex-shrink: 0;
+  background-color: #5c8fe0;
+
+  border-radius: 50%;
 }
-
-
-/* =========================
-   IMAGEN DE PERSONA
-========================= */
 
 .testimonial-circle img {
   width: 100%;
   height: 100%;
 
+  display: block;
+
   object-fit: contain;
   object-position: bottom center;
-
-  display: block;
 }
-
-
-/* =========================
-   CONTENIDO
-========================= */
 
 .testimonial-content {
   width: 100%;
@@ -1068,11 +834,6 @@ opacity: 1;
   text-align: left;
 }
 
-
-/* =========================
-   TEXTO TESTIMONIAL
-========================= */
-
 .testimonial-content p {
   margin: 0 0 8px;
 
@@ -1084,11 +845,6 @@ opacity: 1;
   font-style: italic;
 }
 
-
-/* =========================
-   NOMBRE
-========================= */
-
 .testimonial-content h3 {
   margin: 0 0 2px;
 
@@ -1098,11 +854,6 @@ opacity: 1;
   font-weight: 700;
 }
 
-
-/* =========================
-   SUBTÍTULO
-========================= */
-
 .testimonial-content span {
   color: #ffffff;
 
@@ -1111,188 +862,137 @@ opacity: 1;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 650px) {
-
-  .testimonial-section {
-    flex-direction: column;
-
-    padding: 35px 20px;
-
-    gap: 20px;
-  }
-
-  .testimonial-content {
-    text-align: center;
-  }
-
-  .testimonial-circle {
-    width: 120px;
-    height: 120px;
-  }
-
-}
+/* =========================================================
+   UBICACIÓN
+========================================================= */
 
 /* =========================
-   LOCATION
+   UBICACIÓN
 ========================= */
+
 .location-section {
-  width: calc(100% - 40px);
-  max-width: 1295px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
 
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 58% 42%;
 
-  background-color: #ffffff;
+  background-color: #c9c9c9;
 }
 
+/* MAPA */
+
 .location-map {
-  min-height: 420px;
+  width: 100%;
+  min-height: 470px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .location-map iframe {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 470px;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
 
   border: none;
-  display: block;
 }
 
+/* INFORMACIÓN */
+
 .location-info {
+  width: 100%;
+
   padding: 55px 45px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
 
-  background-color: #5c8fe0;
-  color: #ffffff;
+  gap: 30px;
+
+  background-color: #c9c9c9;
+
+  color: #111111;
 }
 
 .location-block h2 {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
-  color: #00152f;
+  color: #111111;
+
   font-size: 22px;
   font-weight: 800;
 }
 
 .location-block p {
-  margin-bottom: 15px;
+  margin: 0 0 15px;
+
+  color: #111111;
 
   font-size: 14px;
   line-height: 1.5;
 }
 
 .location-block strong {
-  color: #00152f;
+  color: #111111;
 }
 
+/* TABLET Y CELULAR */
+
 @media (max-width: 850px) {
+
   .location-section {
+    width: 100%;
+
     grid-template-columns: 1fr;
+  }
+
+  .location-map,
+  .location-map iframe {
+    min-height: 350px;
   }
 
   .location-info {
     padding: 40px 25px;
   }
 }
-/* =========================
-   CONTACT
-========================= */
-/* =========================================
-   SECCIÓN CONTACTO
-========================================= */
 
-.contact-section {
-  width: 100%;
-  min-height: 470px;
+@media (max-width: 600px) {
 
-  padding: 30px 20px 45px;
+  .location-map,
+  .location-map iframe {
+    min-height: 300px;
+  }
 
-  position: relative;
-  overflow: hidden;
+  .location-info {
+    padding: 35px 22px;
 
-  background-color: #00152f;
-
-  box-sizing: border-box;
+    gap: 25px;
+  }
 }
 
-
-/* =========================================
-   FIGURA DECORATIVA SUPERIOR
-========================================= */
-
-.contact-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 850px;
-  height: 300px;
-
-  top: -170px;
-  right: -100px;
-
-  background-color: #15396c;
-
-  border-radius: 50%;
-
-  transform: rotate(-12deg);
-
-  opacity: 0.8;
-}
-
-
-/* =========================================
-   FIGURA DECORATIVA INFERIOR
-========================================= */
-
-.contact-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 650px;
-  height: 330px;
-
-  left: 20px;
-  bottom: -245px;
-
-  background-color: #17467f;
-
-  border-radius: 50%;
-
-  transform: rotate(25deg);
-
-  opacity: 0.8;
-}
-
-
-/* =========================================
-   CONTENEDOR PRINCIPAL
-========================================= */
+/* =========================================================
+   CONTACTO - CONTENEDOR
+========================================================= */
 
 .contact-container {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 760px;
 
   margin: 0 auto;
-
-  position: relative;
-  z-index: 2;
 }
-
-
-/* =========================================
-   TÍTULO
-========================================= */
 
 .contact-title {
   margin: 0 0 35px;
@@ -1307,8 +1007,50 @@ opacity: 1;
 
 
 /* =========================================
-   INFORMACIÓN DE CONTACTO
+   CORRECCIÓN SECCIÓN CONTACTO
 ========================================= */
+
+.contact-section {
+  width: 100%;
+  min-height: 470px;
+
+  margin: 0;
+  padding: 45px 20px 55px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: #00152f !important;
+
+  box-sizing: border-box;
+}
+
+/* CONTENEDOR */
+
+.contact-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* TÍTULO */
+
+.contact-title {
+  margin: 0 0 35px;
+
+  color: #ffffff !important;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+/* INFORMACIÓN */
 
 .contact-info {
   width: 100%;
@@ -1319,10 +1061,7 @@ opacity: 1;
   margin-bottom: 30px;
 }
 
-
-/* =========================================
-   CADA BLOQUE DE INFORMACIÓN
-========================================= */
+/* CADA BLOQUE */
 
 .contact-info-item {
   min-height: 80px;
@@ -1337,15 +1076,145 @@ opacity: 1;
 
   text-align: center;
 
-  color: #ffffff;
+  color: #ffffff !important;
 
   border-right: 1px solid rgba(255, 255, 255, 0.2);
-
-  box-sizing: border-box;
 }
 
 .contact-info-item:last-child {
   border-right: none;
+}
+
+/* ICONOS */
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff !important;
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+
+  color: #ffffff !important;
+}
+
+/* TEXTO PEQUEÑO */
+
+.contact-label {
+  margin-bottom: 5px;
+
+  color: #aeb8c8 !important;
+
+  font-size: 11px;
+}
+
+/* DATOS */
+
+.contact-info-item p {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+}
+
+/* FORMULARIO */
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-form textarea {
+  min-height: 70px;
+  resize: none;
+}
+
+/* BOTÓN */
+
+.contact-form button {
+  width: 110px;
+  height: 36px;
+
+  margin: 15px auto 0;
+
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff;
+  color: #00152f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-info-item {
+    padding: 15px 0;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .contact-info-item:last-child {
+    border-bottom: none;
+  }
 }
 
 
@@ -1382,13 +1251,7 @@ opacity: 1;
   color: #aeb8c8;
 
   font-size: 10px;
-  font-weight: 400;
-}
-
-
-/* =========================================
-   DATOS DE CONTACTO
-========================================= */
+  font-weight: 400;}
 
 .contact-info-item p {
   margin: 0;
@@ -1438,14 +1301,7 @@ opacity: 1;
 
   font-family: inherit;
   font-size: 12px;
-
-  box-sizing: border-box;
 }
-
-
-/* =========================================
-   PLACEHOLDER
-========================================= */
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
@@ -1454,21 +1310,11 @@ opacity: 1;
   font-style: italic;
 }
 
-
-/* =========================================
-   TEXTAREA
-========================================= */
-
 .contact-form textarea {
   min-height: 70px;
 
   resize: none;
 }
-
-
-/* =========================================
-   BOTÓN ENVIAR
-========================================= */
 
 .contact-form button {
   width: 100px;
@@ -1491,11 +1337,6 @@ opacity: 1;
   transition: 0.3s;
 }
 
-
-/* =========================================
-   HOVER BOTÓN
-========================================= */
-
 .contact-form button:hover {
   background-color: #ffffff;
 
@@ -1503,105 +1344,43 @@ opacity: 1;
 }
 
 
-/* =========================================
-   RESPONSIVE TABLET
-========================================= */
+/* =========================================================
+   CONTENIDO GENERAL
+========================================================= */
 
-@media (max-width: 700px) {
-
-  .contact-section {
-    padding: 40px 25px 50px;
-  }
-
-  .contact-container {
-    max-width: 500px;
-  }
-
-  .contact-title {
-    text-align: center;
-
-    margin-bottom: 30px;
-  }
-
-  .contact-info {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  .contact-info-item {
-    border-right: none;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-    padding: 15px 0;
-  }
-
-  .contact-info-item:last-child {
-    border-bottom: none;
-  }
-
-  .contact-form {
-    width: 100%;
-    max-width: 420px;
-
-    margin: 0 auto;
-  }
-}
-
-
-/* =========================================
-   RESPONSIVE CELULAR
-========================================= */
-
-@media (max-width: 768px) {
-
-  .contact-section {
-    flex-direction: column;
-    gap:25px
-  }
-
-  .contact-title {
-    font-size: 21px;
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 11px;
-  }
-
-  .contact-info-item p {
-    font-size: 10px;
-  }
-}
 .seccion-contenido {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
+
   gap: 40px;
 }
 
-/* ==========================
-VOLUNTTER
-==========================*/
+
+/* =========================================================
+   VOLUNTEER
+========================================================= */
+
 .volunteer-section {
   width: calc(100% - 40px);
   max-width: 1295px;
+
   margin: 0 auto;
+
   padding: 35px 35px 50px;
 
   background-color: #ffffff;
+
   text-align: center;
 }
 
 .volunteer-title {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 35px;
 
   margin-bottom: 35px;
@@ -1610,31 +1389,40 @@ VOLUNTTER
 .volunteer-title span {
   width: 260px;
   height: 3px;
+
   background-color: #5c8fe0;
 }
 
 .volunteer-title h2 {
+  margin: 0;
+
   color: #5c8fe0;
+
   font-size: 22px;
   font-weight: 800;
 }
 
 .volunteer-intro {
   max-width: 900px;
+
   margin: 0 auto 55px;
 
   color: #5c8fe0;
+
   font-size: 15px;
   line-height: 1.4;
 }
 
 .volunteer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-
   max-width: 1100px;
+
   margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 40px;
 }
 
 .volunteer-item {
@@ -1643,14 +1431,18 @@ VOLUNTTER
 
 .volunteer-box {
   min-height: 145px;
+
   padding: 25px 35px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 35px;
 
   background-color: #5c8fe0;
+
   border-radius: 18px;
 
   color: #ffffff;
@@ -1661,8 +1453,11 @@ VOLUNTTER
   height: 80px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 
   border: 4px solid #ffffff;
   border-radius: 50%;
@@ -1688,25 +1483,31 @@ VOLUNTTER
   margin: 35px 0 20px;
 
   color: #5c8fe0;
+
   font-size: 20px;
   font-weight: 800;
 }
 
 .volunteer-item > p {
   max-width: 450px;
+
   margin: 0 auto 25px;
 
   color: #00152f;
+
   font-size: 14px;
   line-height: 1.35;
 }
 
 .volunteer-button {
   display: inline-flex;
+
   align-items: center;
+
   gap: 10px;
 
   color: #00152f;
+
   font-size: 13px;
   font-weight: 800;
 
@@ -1718,6 +1519,7 @@ VOLUNTTER
   height: 28px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1727,9 +1529,154 @@ VOLUNTTER
   font-size: 24px;
 }
 
-/* RESPONSIVE */
+
+/* =========================================================
+   RESPONSIVE - 1050PX
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    row-gap: 70px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 950PX
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .programs-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 50px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET 850PX
+========================================================= */
 
 @media (max-width: 850px) {
+
+  /* HERO */
+
+  .hero {
+    width: 100%;
+
+    min-height: auto;
+
+    flex-direction: column;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left {
+    min-height: 400px;
+  }
+
+  .hero-right {
+    min-height: 430px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 45px 24px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 35px auto;
+
+    padding: 25px 20px;
+
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 340px;
+  }
+
+  .about-content {
+    width: calc(100% - 30px);
+
+    min-height: auto;
+
+    margin: -35px auto 0;
+
+    padding: 35px 24px;
+  }
+
+
+  /* VALUES */
+
+  .values-section {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 45px 24px 35px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 65px 25px;
+  }
+
+
+  /* DONATION */
+
+  .donation-section {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+
+    padding: 35px 24px;
+  }
+
+  .donation-card img {
+    height: 220px;
+  }
+
+
+  /* LOCATION */
+
+  .location-section {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+  }
+
+  .location-info {
+    padding: 40px 25px;
+  }
+
+
+  /* VOLUNTEER */
+
+  .volunteer-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .volunteer-grid {
     grid-template-columns: 1fr;
   }
@@ -1741,165 +1688,374 @@ VOLUNTTER
   .volunteer-box {
     flex-direction: column;
   }
+
+
+  /* GENERAL */
+
+  .seccion-contenido {
+    flex-direction: column;
+  }
 }
-/* =========================
-   HOME RESPONSIVE
-========================= */
 
-@media (max-width: 768px) {
 
-  /* Contenedores principales */
-  .home,
-  .home-container,
-  .home-section,
-  .hero,
-  .hero-container,
-  .section-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+/* =========================================================
+   RESPONSIVE - 700PX
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .values-section {
+    padding: 40px 20px;
   }
 
-  /* Si tienes secciones en dos columnas */
-  .hero-container,
-  .home-container,
-  .section-container {
-    flex-direction: column !important;
+  .values-grid {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
   }
 
-  /* Textos */
-  .hero-content,
-  .home-content,
-  .section-content {
-    width: 100% !important;
-    max-width: 100% !important;
-
-    padding-left: 20px;
-    padding-right: 20px;
+  .values-label {
+    margin-right: 0;
 
     text-align: center;
   }
 
-  /* Imágenes */
-  .hero-image,
-  .home-image,
-  .section-image {
-    width: 100% !important;
-    max-width: 100% !important;
+
+  /* CONTACTO */
+
+  .contact-section {
+    padding: 40px 25px 50px;
   }
 
-  .hero-image img,
-  .home-image img,
-  .section-image img {
+  .contact-container {
+    max-width: 500px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .contact-info-item {
+    padding: 15px 0;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .contact-info-item:last-child {
+    border-bottom: none;
+  }
+
+  .contact-form {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    max-width: 420px;
   }
 }
+
 
 /* =========================================================
-   RESPONSIVE FINAL - SOBRESCRIBE REGLAS DUPLICADAS
+   RESPONSIVE - 650PX
 ========================================================= */
-@media (max-width: 850px) {
-  .hero {
-    width: 100%;
-    max-width: 100%;
-    min-height: auto;
+
+@media (max-width: 650px) {
+
+  .programs-section {
+    padding: 50px 20px;
+  }
+
+  .programs-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .program-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .program-pill {
+    width: 260px;
+  }
+
+  .program-item p {
+    max-width: 320px;
+  }
+
+
+  /* TESTIMONIAL */
+
+  .testimonial-section {
+    padding: 35px 20px;
+
     flex-direction: column;
-  }
-  .hero-left,
-  .hero-right {
-    width: 100%;
-    min-height: 390px;
-  }
-  .hero-content {
-    width: 100%;
-    max-width: 520px;
-    padding: 45px 24px;
-  }
-  .hero-right { min-height: 430px; }
 
-  .about-section {
-    width: 100%;
-    max-width: 100%;
-    margin: 35px auto;
-    padding: 25px 20px;
-    flex-direction: column;
-  }
-  .about-image { width: 100%; height: 340px; }
-  .about-content {
-    width: calc(100% - 30px);
-    margin: -35px auto 0;
-    padding: 35px 24px;
+    gap: 20px;
   }
 
-  .values-section,
-  .donation-section,
-  .location-section,
-  .volunteer-section {
-    width: 100%;
-    max-width: 100%;
+  .testimonial-content {
+    text-align: center;
   }
 
-  .values-section { padding: 45px 24px 35px; }
-  .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 65px 25px; }
-  .programs-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 45px 30px; }
-  .donation-section { grid-template-columns: 1fr; padding: 35px 24px; }
-  .location-section { grid-template-columns: 1fr; }
-  .seccion-contenido { flex-direction: column; }
-  .volunteer-grid { grid-template-columns: 1fr; }
+  .testimonial-circle {
+    width: 120px;
+    height: 120px;
+  }
 }
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR 600PX
+========================================================= */
 
 @media (max-width: 600px) {
-  .hero-left { min-height: 340px; }
-  .hero-right { min-height: 320px; }
-  .hero-content { padding: 35px 20px; }
-  .hero-content h2 { font-size: 18px; }
-  .hero-content p { font-size: 14px; line-height: 1.55; }
 
-  .banner-section { width: 100%; height: 280px; }
+  /* HERO */
 
-  .about-section { padding: 20px 15px; }
-  .about-image { height: 280px; }
-  .about-content { width: calc(100% - 20px); margin-top: -25px; padding: 30px 20px; }
-  .about-content h2 { font-size: 23px; }
-  .about-content p { font-size: 15px; line-height: 1.45; }
+  .hero {
+    min-height: auto;
+  }
 
-  .values-section { padding: 40px 18px 30px; }
-  .values-grid { grid-template-columns: 1fr; gap: 65px; }
-  .values-header p { font-size: 13px; }
+  .hero-left {
+    min-height: 340px;
+  }
 
-  .programs-section { padding: 45px 18px; }
-  .programs-container { grid-template-columns: 1fr; }
-  .program-image, .program-pill { width: min(260px, 100%); }
-  .program-image { height: 260px; }
+  .hero-right {
+    min-height: 320px;
+  }
 
-  .donation-section { padding: 30px 18px; }
-  .donation-card img { height: 200px; }
+  .hero-content {
+    padding: 35px 20px;
+  }
 
-  .testimonial-section { padding: 32px 18px; flex-direction: column; }
-  .testimonial-content { text-align: center; }
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+
+  /* FIGURAS */
+
+  .shape-one,
+  .shape-two {
+    width: 125px;
+    height: 125px;
+  }
+
+  .shape-three {
+    width: 95px;
+    height: 95px;
+  }
+
+
+  /* BANNER */
+
+  .banner-section {
+    width: 100%;
+    height: 280px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 20px 15px;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .about-content {
+    width: calc(100% - 20px);
+
+    margin-top: -25px;
+
+    padding: 30px 20px;
+  }
+
+  .about-content h2 {
+    font-size: 23px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+
+  /* VALUES */
+
+  .values-section {
+    padding: 40px 18px 30px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .values-header p {
+    font-size: 13px;
+  }
+
+
+  /* PROGRAMS */
+
+  .programs-section {
+    padding: 45px 18px;
+  }
+
+  .programs-container {
+    grid-template-columns: 1fr;
+  }
+
+  .program-image,
+  .program-pill {
+    width: min(260px, 100%);
+  }
+
+  .program-image {
+    height: 260px;
+  }
+
+
+  /* DONATIONS */
+
+  .donation-section {
+    padding: 30px 18px;
+  }
+
+  .donation-card img {
+    height: 200px;
+  }
+
+
+  /* TESTIMONIAL */
+
+  .testimonial-section {
+    padding: 32px 18px;
+
+    flex-direction: column;
+  }
+
+
+  /* LOCATION */
 
   .location-map,
-  .location-map iframe { min-height: 300px; }
-  .location-info { padding: 35px 22px; gap: 25px; }
+  .location-map iframe {
+    min-height: 300px;
+  }
 
-  .contact-section { padding: 38px 18px 45px; }
-  .contact-info { grid-template-columns: 1fr; }
-  .contact-info-item { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); padding: 14px 0; }
+  .location-info {
+    padding: 35px 22px;
 
-  .volunteer-section { padding: 35px 18px 45px; }
-  .volunteer-title { gap: 15px; }
-  .volunteer-title span { width: 45px; }
-  .volunteer-box { padding: 25px 18px; gap: 20px; }
+    gap: 25px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 38px 18px 45px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-item {
+    padding: 14px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-title {
+    font-size: 21px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 11px;
+  }
+
+  .contact-info-item p {
+    font-size: 10px;
+  }
+
+
+  /* VOLUNTEER */
+
+  .volunteer-section {
+    padding: 35px 18px 45px;
+  }
+
+  .volunteer-title {
+    gap: 15px;
+  }
+
+  .volunteer-title span {
+    width: 45px;
+  }
+
+  .volunteer-box {
+    padding: 25px 18px;
+
+    gap: 20px;
+  }
 }
 
+
+/* =========================================================
+   RESPONSIVE - 420PX
+========================================================= */
+
 @media (max-width: 420px) {
-  .hero-left { min-height: 320px; }
-  .hero-right { min-height: 280px; }
-  .shape-one, .shape-two { width: 125px; height: 125px; }
-  .shape-three { width: 95px; height: 95px; }
-  .about-image { height: 240px; }
-  .program-image { height: 230px; }
-  .donation-card img { height: 180px; }
+
+  .hero-left {
+    min-height: 320px;
+  }
+
+  .hero-right {
+    min-height: 280px;
+  }
+
+  .hero-content {
+    padding: 30px 18px;
+  }
+
+  .shape-one,
+  .shape-two {
+    width: 125px;
+    height: 125px;
+  }
+
+  .shape-three {
+    width: 95px;
+    height: 95px;
+  }
+
+  .about-image {
+    height: 240px;
+  }
+
+  .program-image {
+    height: 230px;
+  }
+
+  .donation-card img {
+    height: 180px;
+  }
 }

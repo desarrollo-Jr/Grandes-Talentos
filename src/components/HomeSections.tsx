@@ -1,6 +1,6 @@
 import "../styles/home.css";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-
+import brochurePdf from "../assets/documents/BROCHURE.pdf";
 export function Hero() {
   return (
     <section className="hero" id="inicio">
@@ -15,7 +15,11 @@ export function Hero() {
             nisi ut aliquip ex ea commodo consequat.
           </p>
 
-          <a href="#" className="hero-button">
+          <a
+            href={brochurePdf}
+            download="BROCHURE-Grandes-Talentos.pdf"
+            className="hero-button"
+          >
             DESCARGAR
           </a>
         </div>
@@ -37,33 +41,7 @@ export function Hero() {
 
 
 
-export function AboutSection() {
-  return (
-    
-    <section className="about-section">
 
-      <div className="about-image"></div>
-
-      <div className="about-content">
-        <h2>TEXTO DE APOYO</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-        </p>
-      </div>
-    </section>
-  );
-}
 
 const values = [
   {
@@ -244,35 +222,7 @@ export function DonationCards() {
   );
 }
 
-export function TestimonialSection() {
-  return (
-    <section className="testimonial-section">
 
-      <div className="testimonial-person">
-        <div className="testimonial-circle">
-          <img
-            src=""
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div className="testimonial-content">
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-
-        <h3>Lorem ipsum</h3>
-
-        <span>Lorem ipsum</span>
-
-      </div>
-
-    </section>
-  );
-}
 
 export function LocationSection() {
   return (
@@ -302,18 +252,22 @@ export function LocationSection() {
         </div>
 
         <div className="location-block">
-          <h2>DIRECTORIO</h2>
+          <h2></h2>
 
           <p>
-            <strong>TELÉFONO</strong>
-            <br />
-            000 000 0000
+            771 442 1189
           </p>
 
           <p>
-            <strong>CORREO</strong>
+            <strong>Correo de Contacto</strong>
             <br />
             contacto@grandestalentos.org
+          </p>
+          <p>
+        <div className="location-block"></div>
+            <strong>Horario de Atención</strong>
+            <br />
+            Lunes a Viernes de 9:00 am - 5:00 pm
           </p>
         </div>
       </div>

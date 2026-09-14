@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -10,24 +11,21 @@ function Navbar() {
             ¡SÚMATE!
           </Link>
         </li>
-
-        <li>
-          <Link to="/proyectos">
-            PROYECTOS
+        
+         <li>
+          <Link to="/Nosotros">
+            NOSOTROS
           </Link>
         </li>
-
         <li>
-          <Link to="/#informacion">
+          <Link to="/">
             INFORMACIÓN
           </Link>
         </li>
-
-        <li>
-          <Link to="/apoya">
+        <Link to="/apoya">
             APOYA
           </Link>
-        </li>
+       
 
         <li>
           <a href="/#contacto">
