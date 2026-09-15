@@ -1,6 +1,7 @@
 import "../styles/home.css";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import brochurePdf from "../assets/documents/BROCHURE.pdf";
+import { useState } from "react";
 export function Hero() {
   return (
     <section className="hero" id="inicio">
@@ -271,8 +272,64 @@ export function LocationSection() {
 }
 
 export function ContactSection() {
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  const [estado, setEstado] = useState("");
+  const [enviando, setEnviando] = useState(false);
+
+  const enviarFormulario = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    try {
+      setEnviando(true);
+      setEstado("Enviando...");
+
+      const respuesta = await fetch("/api/enviar-correo", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          tipo: "Contacto",
+          nombre,
+          correo,
+          mensaje,
+        }),
+      });
+
+      const resultado = await respuesta.json();
+
+      if (!respuesta.ok) {
+        throw new Error(
+          resultado.mensaje || "No se pudo enviar el mensaje"
+        );
+      }
+
+      setEstado("Mensaje enviado correctamente.");
+
+      setNombre("");
+      setCorreo("");
+      setMensaje("");
+    } catch (error) {
+      console.error("Error:", error);
+
+      setEstado("No se pudo enviar el mensaje.");
+    } finally {
+      setEnviando(false);
+    }
+  };
+
   return (
-    <section className="contact-section" id="contacto">
+    <section
+      className="contact-section"
+      id="contacto"
+    >
       <div className="contact-container">
 
         <h2 className="contact-title">
@@ -290,7 +347,9 @@ export function ContactSection() {
               Teléfono
             </span>
 
-            <p>(771) 257 6279</p>
+            <p>
+              (771) 257 6279
+            </p>
           </div>
 
 
@@ -303,7 +362,9 @@ export function ContactSection() {
               Mail
             </span>
 
-            <p>contacto@grandestalentos.org</p>
+            <p>
+              contacto@grandestalentos.org
+            </p>
           </div>
 
 
@@ -316,7 +377,9 @@ export function ContactSection() {
               Ubicación
             </span>
 
-            <p>Pachuca, Hidalgo</p>
+            <p>
+              Pachuca, Hidalgo
+            </p>
           </div>
 
         </div>
@@ -324,27 +387,60 @@ export function ContactSection() {
 
         <form
           className="contact-form"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={enviarFormulario}
         >
 
           <input
             type="text"
+            name="nombre"
             placeholder="Tu nombre..."
+            value={nombre}
+            onChange={(e) =>
+              setNombre(e.target.value)
+            }
+            required
           />
+
 
           <input
             type="email"
+            name="correo"
             placeholder="Tu correo..."
+            value={correo}
+            onChange={(e) =>
+              setCorreo(e.target.value)
+            }
+            required
           />
+
 
           <textarea
+            name="mensaje"
             placeholder="Tu mensaje..."
-            
+            value={mensaje}
+            onChange={(e) =>
+              setMensaje(e.target.value)
+            }
+            maxLength={300}
+            required
           />
 
-          <button type="submit">
-            ENVIAR
+
+          <button
+            type="submit"
+            disabled={enviando}
+          >
+            {enviando
+              ? "ENVIANDO..."
+              : "ENVIAR"}
           </button>
+
+
+          {estado && (
+            <p className="form-status">
+              {estado}
+            </p>
+          )}
 
         </form>
 
